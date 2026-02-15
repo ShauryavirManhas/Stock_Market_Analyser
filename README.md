@@ -82,7 +82,7 @@ You need to configure two API keys before running the application:
 1. **Alpha Vantage API Key**:
    - Sign up at [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
    - Open `marketapp.py`
-   - Replace `"HM26QL5T0XUYPG4T"` on line 51 with your API key:
+   - Place your API key for Alpha Vantage on line 51:
    ```python
    stock_api_obj = StockAPI("YOUR_ALPHA_VANTAGE_API_KEY")
    ```
