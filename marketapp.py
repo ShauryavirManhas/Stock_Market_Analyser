@@ -44,7 +44,7 @@ def page2():
             image_path = f"{market}_{stock}.png"
             st.session_state.image_path = image_path
 
-            stock_api_obj = StockAPI(st.secrets["GOOGLE_API_KEY"])
+            stock_api_obj = StockAPI(st.secrets["ALPHAVANTAGE_API_KEY"])
 
             market_data = stock_api_obj.get_stock_info(stock, market)
 
@@ -54,7 +54,7 @@ def page2():
 
             stock_analyzer_obj.plot_stock_data(df, stock, market, image_path)
 
-            ai_insights_obj = AIInsights("<Insert API Key>")
+            ai_insights_obj = AIInsights(st.secrets["GOOGLE_API_KEY"])
 
             response = ai_insights_obj.get_ai_insights(image_path, stock, market)
 
