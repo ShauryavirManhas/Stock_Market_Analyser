@@ -44,7 +44,7 @@ def page2():
             image_path = f"{market}_{stock}.png"
             st.session_state.image_path = image_path
 
-            stock_api_obj = StockAPI("<Place your Key here>")
+            stock_api_obj = StockAPI(st.secrets["GOOGLE_API_KEY"])
 
             market_data = stock_api_obj.get_stock_info(stock, market)
 
